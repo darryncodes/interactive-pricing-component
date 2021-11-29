@@ -32,11 +32,16 @@ body {
           align-items: center;
   padding: 0 1rem;
 }
+@media only screen and (min-width: 56.25em) {
+  body {
+    font-size: 1.6rem;
+  }
+}
 
 .attribution {
-  position: absolute;
-  bottom: 30px;
+  margin: 5rem 0;
   font-size: 1.4rem;
+  text-align: center;
 }
 .attribution__link {
   color: #293356;
@@ -124,43 +129,24 @@ select {
     scroll-behavior: auto !important;
   }
 }
-.hero {
-  text-align: center;
-  background-image: url(../../img/pattern-circles.svg);
-  background-repeat: no-repeat;
-  background-position: center;
-  margin-bottom: 4rem;
+.btn {
+  outline: none;
+  border: none;
+  border-radius: 3.5rem;
+  background-color: #293356;
+  color: #cdd7ee;
+  padding: 1.5rem 4rem;
+  cursor: pointer;
+  margin-top: 3rem;
 }
-.hero__heading {
-  font-size: 3.5rem;
-  line-height: 1.1;
-  color: #293356;
-  margin-bottom: 2rem;
+@media only screen and (min-width: 56.25em) {
+  .btn {
+    margin-top: 0;
+    margin-left: 5rem;
+  }
 }
-.hero__content {
-  font-size: 2rem;
-  max-width: 30rem;
-  margin: 0 auto;
-}
-
-.container {
-  text-align: center;
-  background-color: white;
-  border-radius: 1rem;
-}
-
-.card {
-  padding: 6rem 4rem;
-  padding-bottom: 3rem;
-  display: grid;
-  grid-template-areas: "views" "slider" "price" "switch" "ticks";
-  grid-gap: 3rem;
-}
-
-.views {
-  text-transform: uppercase;
-  letter-spacing: 2.5px;
-  grid-area: views;
+.btn:hover {
+  color: #fafbff;
 }
 
 .slider {
@@ -270,14 +256,104 @@ select {
   margin-left: 1rem;
 }
 
+.hero {
+  text-align: center;
+  background-image: url(../../img/pattern-circles.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  padding: 10rem 0;
+}
+@media only screen and (min-width: 56.25em) {
+  .hero {
+    padding: 6rem 0;
+  }
+}
+.hero__heading {
+  font-size: 3.5rem;
+  line-height: 1.1;
+  color: #293356;
+  margin-bottom: 2rem;
+}
+.hero__content {
+  font-size: 2rem;
+  max-width: 30rem;
+  margin: 0 auto;
+}
+
+.container {
+  text-align: center;
+  background-color: white;
+  border-radius: 1rem;
+}
+
+.card {
+  padding: 6rem 4rem;
+  padding-bottom: 3rem;
+  display: grid;
+  grid-template-areas: "views" "slider" "price" "switch" "ticks";
+  grid-gap: 3rem;
+}
+@media only screen and (min-width: 56.25em) {
+  .card {
+    padding-top: 5rem;
+    padding-bottom: 0;
+    grid-template-areas: "views price" "slider slider" "switch switch" "ticks .";
+    grid-gap: 0;
+    row-gap: 5rem;
+  }
+}
+
+.views {
+  text-transform: uppercase;
+  letter-spacing: 2.5px;
+  grid-area: views;
+}
+@media only screen and (min-width: 56.25em) {
+  .views {
+    -ms-flex-item-align: center;
+        align-self: center;
+  }
+}
+
+@media only screen and (min-width: 56.25em) {
+  .price {
+    -ms-flex-item-align: center;
+        align-self: center;
+  }
+}
+.price__amount {
+  color: #293356;
+  font-size: 4rem;
+  font-weight: 800;
+}
+
 .cta {
   grid-area: ticks;
   position: relative;
   padding: 6rem 4rem;
 }
+@media only screen and (min-width: 56.25em) {
+  .cta {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+    text-align: left;
+    padding: 3rem 2rem;
+  }
+}
 .cta__list {
   margin: 0;
   padding: 0;
+}
+@media only screen and (min-width: 56.25em) {
+  .cta__list {
+    padding-left: 3rem;
+  }
 }
 .cta__item {
   position: relative;
@@ -285,37 +361,17 @@ select {
 }
 .cta__item::before {
   content: "";
+  color: #10d5c2;
   position: absolute;
-  top: 11px;
+  top: 15px;
+  -webkit-transform: translateX(-20px);
+          transform: translateX(-20px);
   height: 1rem;
   width: 1rem;
   background-image: url(../../img/icon-check.svg);
   background-repeat: no-repeat;
 }
-.cta__item--one::before {
-  left: 25px;
-}
-@media only screen and (min-width: 350px) {
-  .cta__item--one::before {
-    left: 45px;
-  }
-}
-.cta__item--two::before {
-  left: 15px;
-}
-@media only screen and (min-width: 350px) {
-  .cta__item--two::before {
-    left: 35px;
-  }
-}
-.cta__item--three::before {
-  left: 45px;
-}
-@media only screen and (min-width: 350px) {
-  .cta__item--three::before {
-    left: 65px;
-  }
-}
+
 .cta::before {
   content: "";
   position: absolute;
@@ -324,18 +380,4 @@ select {
   height: 1px;
   width: 100%;
   background-color: #cdd7ee;
-}
-
-.btn {
-  outline: none;
-  border: none;
-  border-radius: 3.5rem;
-  background-color: #293356;
-  color: #cdd7ee;
-  padding: 1.5rem 4rem;
-  cursor: pointer;
-  margin-top: 3rem;
-}
-.btn:hover {
-  color: #fafbff;
 }

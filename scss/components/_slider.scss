@@ -1,0 +1,49 @@
+@use '../base/base' as *;
+
+.slider {
+  grid-area: slider;
+
+  &__input {
+    width: 100%;
+    appearance: none;
+    outline: none;
+    height: 10px;
+    background-color: $light-grayish-blue;
+    cursor: pointer;
+    border-radius: 20px;
+
+    transition: ease-in 0.3s;
+    -webkit-appearance: none;
+
+    &:hover {
+      background-color: $soft-cyan;
+    }
+
+    &::-webkit-slider-thumb {
+      -webkit-appearance: none;
+      appearance: none;
+      width: 50px;
+      height: 50px;
+      background-image: url(../../img/icon-slider.svg);
+      background-repeat: no-repeat;
+      background-position: center;
+      background-color: $strong-cyan;
+      cursor: pointer;
+      border-radius: 50%;
+    }
+
+    &::-moz-range-thumb {
+      -webkit-appearance: none;
+      appearance: none;
+      border: none;
+      width: 50px;
+      height: 50px;
+      background-image: url(../../img/icon-slider.svg);
+      background-repeat: no-repeat;
+      background-position: center;
+      background-color: $strong-cyan;
+      cursor: pointer;
+      border-radius: 50%;
+    }
+  }
+}
