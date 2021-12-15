@@ -158,15 +158,13 @@ select {
        appearance: none;
   outline: none;
   height: 10px;
-  background-color: #cdd7ee;
+  background: -webkit-gradient(linear, left top, right top, color-stop(50%, #a5f3eb), color-stop(50%, #cdd7ee));
+  background: linear-gradient(90deg, #a5f3eb 50%, #cdd7ee 50%);
   cursor: pointer;
   border-radius: 20px;
   -webkit-transition: ease-in 0.3s;
   transition: ease-in 0.3s;
   -webkit-appearance: none;
-}
-.slider__input:hover {
-  background-color: #a5f3eb;
 }
 .slider__input::-webkit-slider-thumb {
   -webkit-appearance: none;

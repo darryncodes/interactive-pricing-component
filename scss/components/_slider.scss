@@ -8,7 +8,7 @@
     appearance: none;
     outline: none;
     height: 10px;
-    background-color: $light-grayish-blue;
+    background: linear-gradient(90deg, $soft-cyan 50%, $light-grayish-blue 50%);
     cursor: pointer;
     border-radius: 20px;
 
@@ -16,7 +16,7 @@
     -webkit-appearance: none;
 
     &:hover {
-      background-color: $soft-cyan;
+      //   background-color: $soft-cyan;
     }
 
     &::-webkit-slider-thumb {
