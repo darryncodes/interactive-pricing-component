@@ -11,10 +11,11 @@
   align-items: center;
 
   &__toggle {
+    justify-self: center;
     position: relative;
     display: inline-block;
-    width: 58px;
-    height: 28px;
+    width: 5.8rem;
+    height: 2.8rem;
   }
 
   &__input {
@@ -28,7 +29,7 @@
     cursor: pointer;
     inset: 0 0 0 0;
     background-color: $light-grayish-blue;
-    border-radius: 20px;
+    border-radius: 2rem;
     transition: 0.3s;
 
     &:hover {
@@ -39,10 +40,10 @@
   &__btn::before {
     position: absolute;
     content: '';
-    height: 20px;
-    width: 20px;
-    left: 4px;
-    bottom: 4px;
+    height: 2rem;
+    width: 2rem;
+    left: 0.4rem;
+    bottom: 0.4rem;
     background-color: $white;
     border-radius: 50%;
     transition: 0.3s;
@@ -53,14 +54,31 @@
   }
 
   &__input:checked + &__btn::before {
-    transform: translateX(29px);
+    transform: translateX(2.9rem);
+  }
+
+  &__monthly {
+    justify-self: end;
   }
 
   &__discount {
     background-color: $light-grayish-red;
     color: $light-red;
+    font-size: 1.4rem;
     border-radius: 2rem;
     padding: 0.5rem 1rem;
     margin-left: 1rem;
+
+    @media only screen and (min-width: $bp-desktop) {
+      font-size: 1.2rem;
+    }
+
+    &--full {
+      display: none;
+
+      @media only screen and (min-width: $bp-desktop) {
+        display: inline-block;
+      }
+    }
   }
 }

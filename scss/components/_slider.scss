@@ -15,10 +15,6 @@
     transition: ease-in 0.3s;
     -webkit-appearance: none;
 
-    &:hover {
-      //   background-color: $soft-cyan;
-    }
-
     &::-webkit-slider-thumb {
       -webkit-appearance: none;
       appearance: none;
@@ -30,6 +26,16 @@
       background-color: $strong-cyan;
       cursor: pointer;
       border-radius: 50%;
+      transition: ease-in 0.1s;
+
+      &:active {
+        background-color: hsl(174, 86%, 35%);
+      }
+
+      &:active,
+      &:hover {
+        box-shadow: 0 10px 25px -3px rgba($strong-cyan, 0.6);
+      }
     }
 
     &::-moz-range-thumb {
@@ -44,6 +50,11 @@
       background-color: $strong-cyan;
       cursor: pointer;
       border-radius: 50%;
+
+      &:active,
+      &:hover {
+        box-shadow: 0 10px 25px -3px rgba($strong-cyan, 0.6);
+      }
     }
   }
 }
