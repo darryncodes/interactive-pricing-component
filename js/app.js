@@ -4,26 +4,31 @@ let views = [
   {
     id: 8,
     price: 8,
+    discount: 6,
     view: '10K',
   },
   {
     id: 12,
     price: 12,
+    discount: 9,
     view: '50K',
   },
   {
     id: 16,
     price: 16,
+    discount: 12,
     view: '100K',
   },
   {
     id: 20,
     price: 20,
+    discount: 15,
     view: '500K',
   },
   {
     id: 24,
     price: 24,
+    discount: 18,
     view: '1M',
   },
 ];
@@ -35,16 +40,20 @@ const priceAmount = document.querySelector('.price__amount');
 
 let yearlyBilling = false;
 let price = views[2].price;
+let discountPrice = views[2].discount;
 
 function handleInput(e) {
   let input = parseInt(e.target.value);
 
   views.forEach((item, index) => {
-    price = item.price;
+    // price = item.price;
+    // discountPrice = item.discount;
     let totalViews = item.view;
     let bg = index * 25;
 
-    if (price === input) {
+    if (item.price === input) {
+      price = item.price;
+      discountPrice = item.discount;
       priceAmount.textContent = `$${price}.00`;
       pageViews.textContent = totalViews;
       slider.style.background = `linear-gradient(90deg,
@@ -58,8 +67,12 @@ function handleClick(btn) {
   yearlyBilling = btn.currentTarget.checked;
 
   if (yearlyBilling) {
-    priceAmount.textContent = `$${price * 0.75}.00`;
-  } else priceAmount.textContent = `$${price * 1}.00`;
+    // price = discountPrice;
+    priceAmount.textContent = `$${discountPrice}.00`;
+  } else {
+    // price = price * 1;
+    priceAmount.textContent = `$${price}.00`;
+  }
 }
 
 btn.addEventListener('click', handleClick);
