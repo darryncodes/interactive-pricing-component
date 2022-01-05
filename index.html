@@ -33,12 +33,14 @@
                 <p><span class="price__amount">$16.00</span><span class="price__period">/month</span></p>
             </div>
             <div class="slider">
+                <label for="slider__input" class="sr-only">Pricing slider input</label>
                 <input type="range" min="8" max="24" value="16" step="4" class="slider__input" id="slider__input">
             </div>
             <div class="switch">
                 <p class="switch__monthly">Monthly Billing</p>
-                <label class="switch__toggle">
-                    <input type="checkbox" class="switch__input">
+                <label for="switch__input" class="switch__toggle">
+                    <span class="sr-only">Yearly Billing 25% discount toggle</span>
+                    <input type="checkbox" class="switch__input" id="switch__input">
                     <span class="switch__btn"></span>
                 </label>
                 <p>Yearly Billing
@@ -49,7 +51,7 @@
             </div>
         </div>
         <div class="cta">
-            <ul class="cta__list" role='list'>
+            <ul class="cta__list">
                 <li class="cta__item cta__item--one">Unlimited websites</li>
                 <li class="cta__item cta__item--two">100% data ownership</li>
                 <li class="cta__item cta__item--three">Email reports</li>
