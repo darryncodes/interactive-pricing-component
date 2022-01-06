@@ -18,4 +18,9 @@
   &:hover {
     color: $very-pale-blue;
   }
+
+  &:focus {
+    outline: 3px solid $strong-cyan;
+    border-radius: 2rem;
+  }
 }

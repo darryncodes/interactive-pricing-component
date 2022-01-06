@@ -16,6 +16,11 @@
     display: inline-block;
     width: 5.8rem;
     height: 2.8rem;
+
+    &:focus-within {
+      outline: 3px solid $strong-cyan;
+      border-radius: 2rem;
+    }
   }
 
   &__input {
@@ -33,7 +38,7 @@
     transition: 0.3s;
 
     &:hover {
-      background-color: $strong-cyan;
+      background-color: $soft-cyan;
     }
   }
 
@@ -50,7 +55,7 @@
   }
 
   &__input:checked + &__btn {
-    background-color: $strong-cyan;
+    background-color: $soft-cyan;
   }
 
   &__input:checked + &__btn::before {

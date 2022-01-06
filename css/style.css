@@ -161,6 +161,10 @@ select {
 .btn:hover {
   color: #fafbff;
 }
+.btn:focus {
+  outline: 3px solid #10d5c2;
+  border-radius: 2rem;
+}
 
 .slider {
   grid-area: slider;
@@ -178,6 +182,11 @@ select {
   -webkit-transition: ease-in 0.3s;
   transition: ease-in 0.3s;
   -webkit-appearance: none;
+}
+.slider__input:focus {
+  outline: 3px solid #10d5c2;
+  -webkit-transition: none;
+  transition: none;
 }
 .slider__input::-webkit-slider-thumb {
   -webkit-appearance: none;
@@ -236,6 +245,10 @@ select {
   width: 5.8rem;
   height: 2.8rem;
 }
+.switch__toggle:focus-within {
+  outline: 3px solid #10d5c2;
+  border-radius: 2rem;
+}
 .switch__input {
   opacity: 0;
   width: 0;
@@ -251,7 +264,7 @@ select {
   transition: 0.3s;
 }
 .switch__btn:hover {
-  background-color: #10d5c2;
+  background-color: #a5f3eb;
 }
 .switch__btn::before {
   position: absolute;
@@ -266,7 +279,7 @@ select {
   transition: 0.3s;
 }
 .switch__input:checked + .switch__btn {
-  background-color: #10d5c2;
+  background-color: #a5f3eb;
 }
 .switch__input:checked + .switch__btn::before {
   -webkit-transform: translateX(2.9rem);
