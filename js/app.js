@@ -83,3 +83,4 @@ btn.addEventListener('click', handleClick);
 slider.addEventListener('input', e => {
   handleInput(e);
 });
+//
